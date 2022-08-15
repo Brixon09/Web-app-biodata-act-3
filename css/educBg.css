@@ -1,0 +1,227 @@
+/*============ Google fonts ============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*======= CSS variables =======*/
+:root{
+  --white-color: #fff;
+  --dark-color: #222;
+  --body-bg-color: #fff;
+  --section-bg-color: black;
+  --navigation-item-hover-color: rgba(236, 16, 60, 0.692);
+
+  --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+
+  --scroll-bar-color: #fff;
+  --scroll-thumb-color: rgba(0, 0, 0, 0.678);
+  --scroll-thumb-hover-color: linear-gradient(130deg, rgba(220, 0, 120, 1)0%, rgba(240, 100, 100, 1)100%);
+}
+/*======= Scroll bar =======*/
+::-webkit-scrollbar{
+  width: 11px;
+  background: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb{
+  width: 100%;
+  background: var(--scroll-thumb-color);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: var(--scroll-thumb-hover-color);
+}
+
+/*======= Main CSS =======*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+body{
+    background-color: rgba(177, 162, 162, 0.664);
+    min-height: 100vh;
+}
+
+/*======= Header =======*/
+header{
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease;
+  transition-property: height, background;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .nav-bar{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  transition: 0.3s ease;
+}
+
+.nav-close-btn, .nav-menu-btn{
+  display: none
+}
+
+.nav-bar .logo{
+  color: rgb(36, 35, 35);
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-shadow: var(--text-shadow);
+}
+
+.navigation .nav-items a{
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  text-shadow: var(--text-shadow);
+
+  font-weight: 500;
+}
+.nav-items a{
+  transition: .5s;
+}
+.nav-items a:hover{
+
+  transition: .5s;
+  color: crimson;
+}
+
+.navigation .nav-items a span{
+  color: crimson;
+}
+.navigation .nav-items a i{
+  display: none;
+}
+
+.navigation .nav-items a:not(:last-child){
+  margin-right: 45px;
+}
+/* ======================== Content ===================*/
+.image{
+  margin: 100px 100px 150px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+  height: 900px;
+  width: 1160px;
+  border-radius: 1px;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 55px 230px;
+  position: absolute;
+  font-size: 0.9em;
+  min-width: 400px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+.content-table tr,
+.content-table td {
+  padding: 7px 15px;
+  border: 1px solid;
+  width: 350px;
+}
+.content-table .bold{
+  font-weight: bold;
+  background-color: #f3f3f3;
+  border: 1px solid;
+  font-size: 17px;
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid crimson;
+}
+.tertiary , .Secondary ,.Elementary
+{
+  font-size: 30px;
+  font-weight: 510;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+
+
+/*======================== footer===================*/
+.copyright {
+  position: sticky;
+  top: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: rgb(24, 23, 23);
+  width: 100%;
+}
+.copyright ul{
+
+  margin: -20px 0 0 0;
+
+}
+.copyright li{
+  color: #ffffff93;
+  font-weight: 200px;
+  font-size: 13px;
+  padding: 40px;
+  height: 100px;
+  text-align: center;
+  list-style-type: none;
+}
+
+
+
+.copyright .social{
+  width: 100%;
+
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.copyright .social h6{
+  color: #ffffffb9;
+}
+.copyright .social a{
+  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  line-height: 39px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid crimson;
+  margin: 5px;
+  color: #fff;
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+.copyright .social a:hover{
+  opacity: 1;
+  color: #ffffff;
+  border-radius: 2px;
+}
+.copyright .copyright{
+  text-align: center;
+  padding-top: 24px;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 16px;
+}
